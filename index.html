@@ -1,196 +1,77 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    margin: 0;
-    background: #eeeeee;
-    color: #222;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    <meta name="description"
+          content="European Goldfinch — a personal archive of words, memories and messages.">
 
-.container {
-    width: min(1100px, 94%);
-    margin: auto;
-}
+    <title>European Goldfinch</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
 
-/* HEADER */
+<body>
 
-.site-header {
-    background: #ffffff;
-    border-bottom: 5px solid #b9b9b9;
-}
+<!-- ================= HEADER ================= -->
 
-.brand {
-    padding-top: 28px;
-    font-size: clamp(32px, 6vw, 58px);
-    font-weight: 800;
-    letter-spacing: -2px;
-}
+<header class="site-header">
 
-.brand .red {
-    color: #b52222;
-}
+    <div class="wrap header-inner">
 
-.brand span:last-child {
-    color: #111;
-}
+        <a class="brand"
+           href="index.html"
+           aria-label="European Goldfinch Home">
 
-.bird {
-    margin-right: 12px;
-    font-size: 42px;
-}
+            <span class="brand-bird" aria-hidden="true">🐦</span>
 
-.tagline {
-    margin-top: 4px;
-    margin-bottom: 20px;
-    color: #666;
-    font-size: 14px;
-}
+            <span class="brand-red">
+                European
+            </span>
 
+            <span>
+                Goldfinch
+            </span>
 
-/* MAIN LAYOUT */
+            <small>
+                .qd.je
+            </small>
 
-.layout {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 18px;
-    padding-top: 18px;
-}
+        </a>
+
+        <div class="tagline">
+            A personal archive of words, memories &amp; messages
+        </div>
+
+    </div>
+
+</header>
 
 
-/* SIDEBAR */
+<!-- ================= MAIN LAYOUT ================= -->
 
-.sidebar {
-    background: #d9d9d9;
-    border: 1px solid #aaa;
-    padding: 15px;
-}
-
-.sidebar h2 {
-    margin: -15px -15px 12px;
-    padding: 8px 10px;
-
-    background: #b52222;
-    color: white;
-
-    font-size: 13px;
-}
-
-.sidebar p {
-    font-family: Georgia, serif;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.sidebar nav {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.sidebar a {
-    color: #333;
-    text-decoration: none;
-    padding: 6px;
-    border-bottom: 1px solid #bbb;
-}
-
-.sidebar a:hover {
-    background: #c7dce7;
-}
+<div class="wrap page-grid">
 
 
-/* CONTENT */
+    <!-- ================= SIDEBAR ================= -->
 
-.content {
-    background: white;
-    border: 1px solid #aaa;
-}
+    <aside class="sidebar">
 
-.page-title {
-    background: #b52222;
-    color: white;
+        <section class="side-box">
 
-    padding: 11px 14px;
+            <h2>
+                ABOUT THE SITE
+            </h2>
 
-    font-weight: bold;
-    font-size: 14px;
-}
+            <p>
+                This site is a small corner of the internet
+                for preserving thoughts, memories and words
+                worth keeping.
+            </p>
 
+            <p class="small">
+                Created for friends, family and anyone
+                who wants to explore 
 
-/* MESSAGE LIST */
-
-.message {
-    display: grid;
-    grid-template-columns: 1fr 150px;
-
-    padding: 13px;
-
-    color: #222;
-    text-decoration: none;
-
-    border-bottom: 1px solid #ccc;
-}
-
-.message:nth-child(even) {
-    background: #e6f1f6;
-}
-
-.message:hover {
-    background: #d2e5ee;
-}
-
-.message-title {
-    font-weight: bold;
-    color: #333;
-}
-
-.message-date {
-    text-align: right;
-    color: #666;
-    font-size: 13px;
-}
-
-
-/* FOOTER */
-
-footer {
-    margin-top: 30px;
-    padding: 25px;
-
-    text-align: center;
-
-    background: #333;
-    color: #ccc;
-
-    font-size: 13px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .layout {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        order: 2;
-    }
-
-    .content {
-        order: 1;
-    }
-
-    .message {
-        grid-template-columns: 1fr;
-        gap: 5px;
-    }
-
-    .message-date {
-        text-align: left;
-    }
-}
+                
