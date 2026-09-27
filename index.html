@@ -1,111 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="European Goldfinch — a personal archive of words, memories and messages.">
-  <title>European Goldfinch</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EuropeanGoldfinch.qd.je</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="index.html" aria-label="European Goldfinch home">
-      <span class="brand-bird" aria-hidden="true">🐦</span>
-      <span class="brand-red">European</span><span>Goldfinch</span><small>.qd.je</small>
-    </a>
-    <div class="tagline">A personal archive of words, memories &amp; messages</div>
+<div class="site">
+<header class="masthead">
+  <div class="landscape"></div>
+  <div class="brand">
+    <img src="goldfinch.svg" class="bird" alt="">
+    <div class="brand-name"><span class="brand-red">European</span><span class="brand-black">Goldfinch</span><span class="brand-domain">.qd.je</span></div>
   </div>
 </header>
 
-<div class="wrap page-grid">
-  <aside class="sidebar">
-    <section class="side-box">
-      <h2>ABOUT THE SITE</h2>
-      <p>This site is a small corner of the internet for preserving thoughts, memories and words worth keeping.</p>
-      <p class="small">Created for friends, family and anyone who has been given a place here.</p>
-    </section>
+<div class="columns">
+<aside class="sidebar">
+  <h2>ABOUT THE SITE:</h2>
+  <p>This is a small personal archive for words, memories, letters and messages worth keeping.</p>
+  <p>Some entries may be written by me, while others may be saved from people close to me.</p>
+  <div class="side-rule"></div>
+  <h3>ARCHIVE:</h3>
+  <a href="#messages">Messages</a>
+  <a href="#messages">Memories</a>
+  <a href="#messages">Important Words</a>
+  <div class="side-rule"></div>
+  <p class="small-note"><b>READ THE ARCHIVE</b><br>Select a topic on the right to open the complete message.</p>
+</aside>
 
-    <section class="side-box">
-      <h2>ARCHIVE</h2>
-      <nav class="side-nav">
-        <a class="active" href="index.html">Home</a>
-        <a href="pages/archive.html">Message archive</a>
-        <a href="pages/about.html">About</a>
-      </nav>
-    </section>
-
-    <section class="side-box quote-box">
-      <h2>NOTE</h2>
-      <p>Some words are worth keeping long after the moment has passed.</p>
-    </section>
-  </aside>
-
-  <main class="content">
-    <div class="section-bar">MESSAGE ARCHIVE <span>Page 1</span></div>
-
-    <div class="table-head">
-      <div>MESSAGE / TOPIC</div>
-      <div>POSTED</div>
-      <div aria-hidden="true"></div>
-    </div>
-
-    <div class="message-list">
-      <a class="message-row" href="pages/message.html?id=1">
-        <div>
-          <strong>A thought worth remembering</strong>
-          <p>A few words I wanted to preserve.</p>
-        </div>
-        <time datetime="2026-09-28">09/28/2026</time>
-        <span class="arrow">›</span>
-      </a>
-
-      <a class="message-row" href="pages/message.html?id=2">
-        <div>
-          <strong>A message for the people I care about</strong>
-          <p>Words meant for friends and family.</p>
-        </div>
-        <time datetime="2026-09-27">09/27/2026</time>
-        <span class="arrow">›</span>
-      </a>
-
-      <a class="message-row" href="pages/message.html?id=3">
-        <div>
-          <strong>Something I wanted to preserve</strong>
-          <p>A memory that deserves its own page.</p>
-        </div>
-        <time datetime="2026-09-25">09/25/2026</time>
-        <span class="arrow">›</span>
-      </a>
-
-      <a class="message-row" href="pages/message.html?id=4">
-        <div>
-          <strong>Letters never sent</strong>
-          <p>A place for words that still matter.</p>
-        </div>
-        <time datetime="2026-09-20">09/20/2026</time>
-        <span class="arrow">›</span>
-      </a>
-
-      <a class="message-row" href="pages/message.html?id=5">
-        <div>
-          <strong>Memories</strong>
-          <p>Small moments I don't want to forget.</p>
-        </div>
-        <time datetime="2026-09-18">09/18/2026</time>
-        <span class="arrow">›</span>
-      </a>
-    </div>
-
-    <div class="notice">
-      <strong>European Goldfinch</strong><br>
-      This is a static archive. To add or change a message, edit the HTML and commit the update to GitHub.
-    </div>
-  </main>
+<main class="forum">
+  <div class="page-bar">Page 1</div>
+  <div class="table-wrap" id="messages">
+  <table>
+    <thead><tr><th class="topic">TOPIC</th><th class="user">USER ID</th><th class="posted">POSTED</th><th class="icon"></th></tr></thead>
+    <tbody>
+      <tr><td><a href="messages/words-worth-remembering.html">Words worth remembering</a></td><td>Anonymous</td><td>09/28</td><td class="bird-cell">🐦</td></tr>
+      <tr><td><a href="messages/message-for-the-future.html">A message for the future</a></td><td>Anonymous</td><td>09/28</td><td class="bird-cell">🐦</td></tr>
+      <tr><td><a href="messages/memories.html">Memories</a></td><td>Anonymous</td><td>09/28</td><td class="bird-cell">🐦</td></tr>
+      <tr><td><a href="messages/important-messages.html">Important messages</a></td><td>Anonymous</td><td>09/28</td><td class="bird-cell">🐦</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="archive-note"><b>ABOUT THE ARCHIVE</b><p>New entries can be added to the table and saved permanently by committing the new message file to the GitHub repository.</p></div>
+</main>
 </div>
-
-<footer>
-  <div class="wrap">European Goldfinch © 2026 · <a href="pages/about.html">About this site</a></div>
-</footer>
+<footer>EuropeanGoldfinch.qd.je &nbsp;|&nbsp; Personal Archive</footer>
+</div>
 </body>
 </html>
