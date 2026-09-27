@@ -1,0 +1,361 @@
+/* European Goldfinch — retro forum / early-web inspired design */
+
+:root {
+  --red: #b3262d;
+  --red-dark: #8e1b20;
+  --blue-row: #e8f2f7;
+  --border: #b9c0c4;
+  --text: #222;
+  --muted: #666;
+  --page: #eeeeee;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+a { color: inherit; }
+
+.wrap {
+  width: min(1120px, calc(100% - 28px));
+  margin-inline: auto;
+}
+
+/* Header */
+
+.site-header {
+  background:
+    linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.88)),
+    radial-gradient(circle at 20% 40%, #dfe9cf, transparent 35%),
+    #fff;
+  border-bottom: 5px solid #c8c8c8;
+}
+
+.header-inner { padding: 20px 0 16px; }
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  text-decoration: none;
+  font-size: clamp(34px, 6vw, 64px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -2.5px;
+}
+
+.brand-bird {
+  font-size: .65em;
+  margin-right: 10px;
+  filter: saturate(.85);
+}
+
+.brand-red { color: var(--red); }
+.brand small {
+  color: #333;
+  font-size: .34em;
+  margin-left: 4px;
+  letter-spacing: -.5px;
+}
+
+.tagline {
+  margin-top: 8px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* Main */
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 14px;
+  padding-top: 14px;
+  padding-bottom: 24px;
+}
+
+.sidebar { min-width: 0; }
+
+.side-box {
+  background: #d8d8d8;
+  border: 1px solid #b5b5b5;
+  margin-bottom: 14px;
+  padding: 12px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.08);
+}
+
+.side-box h2 {
+  margin: -12px -12px 10px;
+  padding: 8px 10px;
+  background: var(--red);
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: .3px;
+}
+
+.side-box p {
+  margin: 8px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.45;
+}
+
+.side-box .small {
+  color: #555;
+  font-size: 12px;
+}
+
+.side-nav {
+  display: grid;
+  gap: 2px;
+}
+
+.side-nav a {
+  padding: 7px 8px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.side-nav a:hover,
+.side-nav a.active {
+  background: #c8dfe9;
+  color: #111;
+}
+
+/* Content */
+
+.content {
+  background: var(--white);
+  border: 1px solid var(--border);
+  min-width: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08);
+}
+
+.section-bar {
+  background: var(--red);
+  color: #fff;
+  padding: 9px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  border-bottom: 1px solid var(--red-dark);
+}
+
+.section-bar span {
+  float: right;
+  font-weight: 400;
+  opacity: .9;
+}
+
+.table-head {
+  display: grid;
+  grid-template-columns: 1fr 135px 28px;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #f5f5f5;
+  border-bottom: 1px solid var(--border);
+  color: #555;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.message-row {
+  display: grid;
+  grid-template-columns: 1fr 135px 28px;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  min-height: 58px;
+  text-decoration: none;
+  border-bottom: 1px solid #cdd6da;
+}
+
+.message-row:nth-child(even) { background: var(--blue-row); }
+.message-row:hover { background: #d6e8ef; }
+
+.message-row strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.message-row p {
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.message-row time {
+  color: #555;
+  font-size: 12px;
+}
+
+.arrow {
+  font-size: 22px;
+  color: #8c5d1d;
+  text-align: center;
+}
+
+.notice {
+  margin: 14px;
+  padding: 10px 12px;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Archive */
+
+.archive-cards { padding: 10px; }
+
+.archive-card {
+  display: block;
+  padding: 13px;
+  margin-bottom: 7px;
+  background: #f7f7f7;
+  border: 1px solid #d0d0d0;
+  text-decoration: none;
+}
+
+.archive-card:nth-child(even) { background: var(--blue-row); }
+.archive-card:hover { border-color: #9ebbc7; }
+
+.archive-card b { display: block; }
+.archive-card small { color: #666; }
+
+/* Articles */
+
+.article,
+.message-page {
+  padding: 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+.article h1,
+.message-page h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.article-note {
+  margin-top: 20px;
+  padding: 12px;
+  background: #fff7d8;
+  border: 1px solid #dfd09a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.message-meta {
+  color: #777;
+  font: 12px Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 9px;
+  margin-bottom: 18px;
+}
+
+.message-page blockquote {
+  margin: 22px 0;
+  padding: 12px 18px;
+  border-left: 4px solid var(--red);
+  background: #f3f3f3;
+  font-style: italic;
+}
+
+.back-link {
+  padding: 0 22px 22px;
+}
+
+.back-link a {
+  color: var(--red-dark);
+  font-weight: 700;
+}
+
+/* Footer */
+
+footer {
+  background: #333;
+  color: #ccc;
+  padding: 24px 0;
+  font-size: 12px;
+}
+
+footer a { color: #fff; }
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+  }
+
+  .brand {
+    letter-spacing: -1.8px;
+  }
+
+  .table-head {
+    grid-template-columns: 1fr 100px 22px;
+  }
+
+  .message-row {
+    grid-template-columns: 1fr 100px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    width: min(100% - 18px, 1120px);
+  }
+
+  .header-inner {
+    padding-top: 15px;
+  }
+
+  .brand {
+    font-size: 33px;
+  }
+
+  .brand-bird {
+    font-size: 23px;
+    margin-right: 6px;
+  }
+
+  .table-head {
+    display: none;
+  }
+
+  .message-row {
+    grid-template-columns: 1fr 24px;
+  }
+
+  .message-row time {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .message-row .arrow {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
