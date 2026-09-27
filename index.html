@@ -1,196 +1,111 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="European Goldfinch — a personal archive of words, memories and messages.">
+  <title>European Goldfinch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="European Goldfinch home">
+      <span class="brand-bird" aria-hidden="true">🐦</span>
+      <span class="brand-red">European</span><span>Goldfinch</span><small>.qd.je</small>
+    </a>
+    <div class="tagline">A personal archive of words, memories &amp; messages</div>
+  </div>
+</header>
 
-body {
-    margin: 0;
-    background: #eeeeee;
-    color: #222;
-    font-family: Arial, Helvetica, sans-serif;
-}
+<div class="wrap page-grid">
+  <aside class="sidebar">
+    <section class="side-box">
+      <h2>ABOUT THE SITE</h2>
+      <p>This site is a small corner of the internet for preserving thoughts, memories and words worth keeping.</p>
+      <p class="small">Created for friends, family and anyone who has been given a place here.</p>
+    </section>
 
-.container {
-    width: min(1100px, 94%);
-    margin: auto;
-}
+    <section class="side-box">
+      <h2>ARCHIVE</h2>
+      <nav class="side-nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="pages/archive.html">Message archive</a>
+        <a href="pages/about.html">About</a>
+      </nav>
+    </section>
 
+    <section class="side-box quote-box">
+      <h2>NOTE</h2>
+      <p>Some words are worth keeping long after the moment has passed.</p>
+    </section>
+  </aside>
 
-/* HEADER */
+  <main class="content">
+    <div class="section-bar">MESSAGE ARCHIVE <span>Page 1</span></div>
 
-.site-header {
-    background: #ffffff;
-    border-bottom: 5px solid #b9b9b9;
-}
+    <div class="table-head">
+      <div>MESSAGE / TOPIC</div>
+      <div>POSTED</div>
+      <div aria-hidden="true"></div>
+    </div>
 
-.brand {
-    padding-top: 28px;
-    font-size: clamp(32px, 6vw, 58px);
-    font-weight: 800;
-    letter-spacing: -2px;
-}
+    <div class="message-list">
+      <a class="message-row" href="pages/message.html?id=1">
+        <div>
+          <strong>A thought worth remembering</strong>
+          <p>A few words I wanted to preserve.</p>
+        </div>
+        <time datetime="2026-09-28">09/28/2026</time>
+        <span class="arrow">›</span>
+      </a>
 
-.brand .red {
-    color: #b52222;
-}
+      <a class="message-row" href="pages/message.html?id=2">
+        <div>
+          <strong>A message for the people I care about</strong>
+          <p>Words meant for friends and family.</p>
+        </div>
+        <time datetime="2026-09-27">09/27/2026</time>
+        <span class="arrow">›</span>
+      </a>
 
-.brand span:last-child {
-    color: #111;
-}
+      <a class="message-row" href="pages/message.html?id=3">
+        <div>
+          <strong>Something I wanted to preserve</strong>
+          <p>A memory that deserves its own page.</p>
+        </div>
+        <time datetime="2026-09-25">09/25/2026</time>
+        <span class="arrow">›</span>
+      </a>
 
-.bird {
-    margin-right: 12px;
-    font-size: 42px;
-}
+      <a class="message-row" href="pages/message.html?id=4">
+        <div>
+          <strong>Letters never sent</strong>
+          <p>A place for words that still matter.</p>
+        </div>
+        <time datetime="2026-09-20">09/20/2026</time>
+        <span class="arrow">›</span>
+      </a>
 
-.tagline {
-    margin-top: 4px;
-    margin-bottom: 20px;
-    color: #666;
-    font-size: 14px;
-}
+      <a class="message-row" href="pages/message.html?id=5">
+        <div>
+          <strong>Memories</strong>
+          <p>Small moments I don't want to forget.</p>
+        </div>
+        <time datetime="2026-09-18">09/18/2026</time>
+        <span class="arrow">›</span>
+      </a>
+    </div>
 
+    <div class="notice">
+      <strong>European Goldfinch</strong><br>
+      This is a static archive. To add or change a message, edit the HTML and commit the update to GitHub.
+    </div>
+  </main>
+</div>
 
-/* MAIN LAYOUT */
-
-.layout {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 18px;
-    padding-top: 18px;
-}
-
-
-/* SIDEBAR */
-
-.sidebar {
-    background: #d9d9d9;
-    border: 1px solid #aaa;
-    padding: 15px;
-}
-
-.sidebar h2 {
-    margin: -15px -15px 12px;
-    padding: 8px 10px;
-
-    background: #b52222;
-    color: white;
-
-    font-size: 13px;
-}
-
-.sidebar p {
-    font-family: Georgia, serif;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.sidebar nav {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.sidebar a {
-    color: #333;
-    text-decoration: none;
-    padding: 6px;
-    border-bottom: 1px solid #bbb;
-}
-
-.sidebar a:hover {
-    background: #c7dce7;
-}
-
-
-/* CONTENT */
-
-.content {
-    background: white;
-    border: 1px solid #aaa;
-}
-
-.page-title {
-    background: #b52222;
-    color: white;
-
-    padding: 11px 14px;
-
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-/* MESSAGE LIST */
-
-.message {
-    display: grid;
-    grid-template-columns: 1fr 150px;
-
-    padding: 13px;
-
-    color: #222;
-    text-decoration: none;
-
-    border-bottom: 1px solid #ccc;
-}
-
-.message:nth-child(even) {
-    background: #e6f1f6;
-}
-
-.message:hover {
-    background: #d2e5ee;
-}
-
-.message-title {
-    font-weight: bold;
-    color: #333;
-}
-
-.message-date {
-    text-align: right;
-    color: #666;
-    font-size: 13px;
-}
-
-
-/* FOOTER */
-
-footer {
-    margin-top: 30px;
-    padding: 25px;
-
-    text-align: center;
-
-    background: #333;
-    color: #ccc;
-
-    font-size: 13px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .layout {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        order: 2;
-    }
-
-    .content {
-        order: 1;
-    }
-
-    .message {
-        grid-template-columns: 1fr;
-        gap: 5px;
-    }
-
-    .message-date {
-        text-align: left;
-    }
-}
+<footer>
+  <div class="wrap">European Goldfinch © 2026 · <a href="pages/about.html">About this site</a></div>
+</footer>
+</body>
+</html>
