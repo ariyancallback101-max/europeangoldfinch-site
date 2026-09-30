@@ -1,0 +1,326 @@
+* { box-sizing: border-box; }
+
+:root {
+  --red: #c92129;
+  --red-dark: #a81820;
+  --blue: #e5f0f5;
+  --border: #d4dfe3;
+  --text: #202326;
+  --muted: #6a7176;
+  --bg: #f4f6f7;
+  --sidebar: #dedede;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+  min-height: 125px;
+  padding: 20px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.9), rgba(255,255,255,.5)),
+    linear-gradient(#dce9df, #eef3ee);
+  border-bottom: 1px solid #ccd5cf;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bird-logo {
+  width: 76px;
+  height: 76px;
+  border: 1px solid #c9d2cb;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 43px;
+  background: rgba(255,255,255,.7);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(29px, 5vw, 48px);
+  letter-spacing: -1.8px;
+}
+
+h1 span { color: var(--red); }
+
+.brand p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.account-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-badge {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 700;
+}
+
+.ghost-btn, .small-btn {
+  border: 1px solid var(--border);
+  background: white;
+  padding: 9px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page-wrap {
+  width: min(920px, 94%);
+  margin: 28px auto 50px;
+}
+
+.auth-card, .card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  box-shadow: 0 4px 16px rgba(30,40,45,.04);
+}
+
+.auth-card {
+  width: min(500px, 100%);
+  margin: 35px auto;
+  padding: 24px;
+}
+
+.auth-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin: -24px -24px 22px;
+}
+
+.tab {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.tab.active {
+  color: var(--red);
+  border-bottom: 3px solid var(--red);
+}
+
+.auth-intro h2 {
+  margin: 0 0 5px;
+}
+
+.auth-intro p, .dashboard-head p {
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.field { margin: 16px 0; }
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid #cbd6da;
+  border-radius: 5px;
+  padding: 12px;
+  font: inherit;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #8eaab5;
+  box-shadow: 0 0 0 3px rgba(100,150,170,.1);
+}
+
+.primary-btn {
+  border: 0;
+  border-radius: 5px;
+  padding: 11px 16px;
+  background: var(--red);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-btn:hover { background: var(--red-dark); }
+.wide { width: 100%; }
+
+.status {
+  min-height: 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dashboard-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.dashboard-head h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.eyebrow {
+  color: var(--red) !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.account-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 7px 12px 7px 7px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--red);
+  color: white;
+}
+
+.composer { padding: 18px; }
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.composer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.messages-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 0 10px;
+}
+
+.messages-head h3 { margin: 0; }
+
+.messages-list {
+  display: grid;
+  gap: 10px;
+}
+
+.message {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.message:nth-child(even) { background: var(--blue); }
+
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.message-body {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.message-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.delete-btn {
+  border: 1px solid #e1bfc1;
+  color: #a71920;
+  background: white;
+  padding: 7px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.empty {
+  text-align: center;
+  background: white;
+  border: 1px dashed var(--border);
+  padding: 30px;
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 15px;
+  font-size: 13px;
+}
+
+[hidden] { display: none !important; }
+
+@media (max-width: 650px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .account-area { align-self: stretch; justify-content: flex-end; }
+
+  .bird-logo {
+    width: 58px;
+    height: 58px;
+    font-size: 32px;
+  }
+
+  h1 { font-size: 28px; }
+
+  .brand p { font-size: 12px; }
+
+  .dashboard-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .account-chip { align-self: flex-start; }
+}
