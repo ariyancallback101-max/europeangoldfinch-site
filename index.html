@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goldfinch Forum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="bird-logo" aria-hidden="true">🐦</div>
+      <div>
+        <h1><span>European</span>Goldfinch.net</h1>
+        <p>A friendly community for goldfinch enthusiasts</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <aside class="sidebar">
+      <section>
+        <h2>ABOUT THE SITE:</h2>
+        <p>This community is dedicated to fans, keepers, photographers and admirers of European Goldfinches and other beautiful finches.</p>
+      </section>
+
+      <section>
+        <h2>FAQ:</h2>
+        <h3>What is a European Goldfinch?</h3>
+        <p>The European Goldfinch is a small, colorful passerine known for its red face, black-and-white head and bright yellow wing bars.</p>
+        <a href="#" class="read-more">READ THE FAQ HERE!</a>
+      </section>
+
+      <section class="sidebar-card">
+        <h2>COMMUNITY</h2>
+        <p><strong id="topicCount">0</strong> discussions</p>
+        <p><strong id="memberCount">1,248</strong> members</p>
+      </section>
+    </aside>
+
+    <main class="content">
+      <div class="content-top">
+        <div>
+          <h2>Forum Topics</h2>
+          <p>Browse the latest conversations from the community.</p>
+        </div>
+        <button id="newTopicBtn" class="primary-btn">+ New Topic</button>
+      </div>
+
+      <div class="tools">
+        <input id="searchInput" type="search" placeholder="Search topics...">
+      </div>
+
+      <div class="forum-table">
+        <div class="table-head">
+          <div>TOPIC</div>
+          <div>USER ID</div>
+        </div>
+        <div id="topicList"></div>
+      </div>
+
+      <p id="emptyState" class="empty-state" hidden>No topics match your search.</p>
+    </main>
+  </div>
+
+  <div id="topicModal" class="modal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <h2>Start a new discussion</h2>
+      <form id="topicForm">
+        <label>
+          Topic title
+          <input id="topicTitle" required maxlength="100" placeholder="e.g. Goldfinch photography tips">
+        </label>
+        <label>
+          User ID
+          <input id="topicUser" required maxlength="40" placeholder="e.g. BirdLover24">
+        </label>
+        <button class="primary-btn" type="submit">Create Topic</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Goldfinch Forum · Built for bird lovers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
