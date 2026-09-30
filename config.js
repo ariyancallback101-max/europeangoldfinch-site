@@ -1,14 +1,13 @@
 /*
   SUPABASE CONFIGURATION
 
-  Replace the two placeholder strings below with:
-  1. Your Supabase Project URL
-  2. Your Supabase Publishable key (or legacy anon key)
+  This connects the website to your Supabase project.
+  The publishable key is safe to use in a public GitHub Pages site.
 
   IMPORTANT:
-  Never put your Supabase secret/service_role key in this file.
-  This file is public because GitHub Pages is public.
+  Never use a Supabase secret/service_role key here.
 */
 
-window.SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-window.SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY";
+window.SUPABASE_URL = "https://kxwaogzlklezuwrdrbxi.supabase.co";
+
+window.SUPABASE_KEY = "sb_publishable_MgkKzPkNnep9Nl5mht9F-w_6UIx-dhG";
